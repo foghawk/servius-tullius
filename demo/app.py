@@ -1,5 +1,7 @@
 from __future__ import absolute_import, unicode_literals
 
+import db
+
 from flask import Flask, redirect, render_template, request, url_for
 app = Flask("demo")
 

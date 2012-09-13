@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 import os
 
-from app import app
+import app
 
 host = None
 port = None
