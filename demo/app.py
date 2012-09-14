@@ -19,8 +19,8 @@ def root():
 @app.route("/submit", methods=["POST"])
 def submit_results():
 	new_answers = db.SurveyResult(
-		ans1 = request.form.get("ans1") or False
-		ans2 = request.form.get("ans2") or 0
+		ans1 = request.form.get("ans1") or False,
+		ans2 = request.form.get("ans2") or 0,
 		ans3 = request.form.get("ans3") or "No comment."
 	)
 	db.session.add(new_answers)
