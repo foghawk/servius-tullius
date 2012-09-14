@@ -14,7 +14,7 @@ def shutdown_session(exception = None):
 @app.route("/")
 def root():
 	results = db.session.query(db.SurveryResult).order_by(db.SurveyResult.timestamp.asc())
-    return render_template("index.html", results = results)
+	return render_template("index.html", results = results)
 
 @app.route("/submit", methods=["POST"])
 def submit_results():
