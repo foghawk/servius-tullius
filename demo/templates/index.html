@@ -6,7 +6,7 @@
 	<h2>surveyors == obsolete as fuck</h2>
 	<p>all has been explored, there is no place to stick a lost civilization even if you have one handy</p>
 	
-	<form action="" method="POST">
+	<form action="{{ url_for('submit_results') }}" method="POST">
 		<p>Q1. Are you going to check this box? <input type="checkbox" name="ans1"></p>
 		<p>Q2. Which of these numbers are you going to choose?
 			<select name="ans2">
