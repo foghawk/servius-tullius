@@ -20,3 +20,7 @@ class SurveyResult(Base):
 	ans1 = Column(Boolean, nullable = False)
 	ans2 = Column(Integer, nullable = False)
 	ans3 = Column(Unicode, nullable = False)
+	
+	def __init__(self, **kwargs):
+		kwargs.setdefault("timestamp", datetime.utcnow())
+		super(SurveyResult, self).__init__(**kwargs)

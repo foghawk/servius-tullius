@@ -6,7 +6,26 @@
 	<h2>surveyors == obsolete as fuck</h2>
 	<p>all has been explored, there is no place to stick a lost civilization even if you have one handy</p>
 	
-	<ul id="results"><!--???-->
-		<li>...</li>
+	<form action="" method="POST">
+		<p>Q1. Are you going to check this box? <input type="checkbox" name="ans1"></p>
+		<p>Q2. Which of these numbers are you going to choose?
+			<select name="ans2">
+				{% for i in range(0, 100) %}
+					<option value="{{ i }}">{{ i }}</option>
+				{% endfor %}
+			</select>
+		</p>
+		<p>Q3. What do you have to say for yourself? <textarea name="ans3"></textarea></p>
+		<p><button>Submit</button></p>
+	</form>
+	
+	<hr />
+	
+	<ul id="results">
+		{% for entry in entries %}
+		<li>
+			<p>Q1: {{ entry.ans1 }}. Q2: {{ entry.ans2 }}. Q3: {{ entry.ans3 }}. Logged <time>{{ entry.timestamp }}.</p>
+		</li>
+		{% endfor %}
 	</ul>
 {% endblock %}
