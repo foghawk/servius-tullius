@@ -22,9 +22,9 @@
 	<hr />
 	
 	<ul id="results">
-		{% for entry in entries %}
+		{% for result in results %}
 		<li>
-			<p>Q1: {{ entry.ans1 }}. Q2: {{ entry.ans2 }}. Q3: {{ entry.ans3 }}. Logged <time>{{ entry.timestamp }}.</p>
+			<p>Q1: {{ result.ans1 }}. Q2: {{ result.ans2 }}. Q3: {{ result.ans3 }}. Logged <time>{{ result.timestamp }}.</p>
 		</li>
 		{% endfor %}
 	</ul>
